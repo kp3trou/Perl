@@ -1,17 +1,86 @@
+Perl Information Retrieval Evaluation Library
+
+A custom Perl 5 library for evaluating and visualizing the effectiveness of ranking models in Information Retrieval systems. 
+The library computes Precision and Recall, and generates plots for a clear comparison between different models.
+
+Implemented Ranking Models:
+
+The library has been tested with the following ranking models (using Apache Lucene outputs):
+
+- BM25 Similarity
+
+- TF-IDF Similarity
+
+- Dirichlet Similarity LM Model
+
+- Jelinek–Mercer Similarity LM Model
+
+Evaluation Metrics:
+
+- Precision
+
+- Recall
+
+
+The library requires two types of input files:
+
+- Ranking Results (Lucene outputs):
+
+lucene_output_bm25
+
+lucene_output_tf_idf
+
+lucene_output_LMDirichletSimilarity
+
+lucene_output_LMJelinekMercerSimilarity
+
+- Relevance Judgments (Ground Truth):
+
+qrels.text_parsed_2
+
+The qrels.text_parsed_2 file contains human judgments (relevance assessments) used as the gold standard for evaluation.
+
+Example Output (TF-IDF):
+
+
+(Recall, Precision)
+(0.0, 0.6)
+(0.1, 0.6)
+(0.2, 0.4)
+(0.3, 0.1)
+(0.4, 0.1)
+(0.5, 0.1)
+(0.6, 0.1)
+(0.7, 0.1)
+(0.8, 0.1)
+(0.9, 0.1)
+(1.0, 0.1)
+
+- Usage:
+
+# Clone repository
+git clone 
+
+# run script
+./precision_recall.pl
 
 
 
-:%s/Query\s*:\s*\(\d\+\).*cacm\(\d\+\),.*/\1 \2/
-
-:g/^Results for query:/d
-
-
-:g/^\s*$/d
 
 
 
-for delete queries that missing from qrels.txt :
 
-:g/^\(34\|35\|41\|46\|47\|50\|51\|52\|53\|54\|55\|56\)\s/d
+
+
+
+
+
+
+
+
+
+
+
+
 
 
