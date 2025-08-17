@@ -1,0 +1,17 @@
+
+
+
+:%s/Query\s*:\s*\(\d\+\).*cacm\(\d\+\),.*/\1 \2/
+
+:g/^Results for query:/d
+
+
+:g/^\s*$/d
+
+
+
+for delete queries that missing from qrels.txt :
+
+:g/^\(34\|35\|41\|46\|47\|50\|51\|52\|53\|54\|55\|56\)\s/d
+
+
